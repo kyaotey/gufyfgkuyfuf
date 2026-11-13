@@ -41,22 +41,28 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
+    %% Left side (Top to Bottom)
     A[Literature Review: DTN Protocols & Energy-Aware Routing] --> B[Algorithm Design: Deadline, Hop Count, Residual Energy]
     B --> C[Simulation Implementation in The ONE Simulator]
     C --> D[Comparative Experiment: Epidemic, Spray-and-Wait, PRoPHET, Proposed]
-    D --> E[Data Analysis: Delivery Ratio, Latency, Overhead, Deadline Delivery Rate]
+    
+    %% The Bridge at the bottom
+    D -->|Data Analysis Phase| E[Data Analysis: Delivery Ratio, Latency, Overhead, Deadline Delivery Rate]
+    
+    %% Right side (Bottom to Top)
     E --> F[Findings: Does Deadline and Energy Awareness Improve Performance?]
     F --> G[Prototype Demonstration: Android App & Nearby Connections]
     G --> H[Conclusion: Bounded, Reproducible Evidence and Limitations]
-    
+
+    %% Styling to make it look clean on GitHub
     style A fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
     style B fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
     style C fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
     style D fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style E fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style E fill:#1f2937,stroke:#10b981,stroke-width:2px,color:#fff
     style F fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
     style G fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style H fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style H fill:#1f2937,stroke:#10b981,stroke-width:2px,color:#fff
 ```
 
 ### Figure 10.3: The ONE Simulator Scenario Layout
@@ -97,4 +103,3 @@ flowchart LR
     VB3 ==>|Carry to Gateway| G1
     G1 ==> G2
 ```
-
